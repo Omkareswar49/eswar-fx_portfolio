@@ -143,4 +143,10 @@ style.textContent = `
         transform: rotate(45deg) translate(-5px, -6px);
     }
 `;
-document.head.appendChild(style); 
+document.head.appendChild(style);
+
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+}); 

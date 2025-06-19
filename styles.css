@@ -10,6 +10,8 @@ body {
     background: #000;
     color: #fff;
     line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* Neon Yellow Utility */
@@ -50,12 +52,12 @@ body {
 
 /* Navbar */
 .navbar {
-    width: 100%;
-    background: #000;
-    padding: 1.2rem 2.5rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1.2rem 2.5rem;
+    background: #000;
     position: fixed;
     top: 0;
     left: 0;
@@ -70,9 +72,11 @@ body {
 }
 
 .nav-links {
-    display: flex;
-    list-style: none;
+    display: flex !important;
+    flex-direction: row;
     gap: 2.5rem;
+    margin-left: auto;
+    list-style: none;
 }
 
 .nav-links a {
@@ -89,11 +93,11 @@ body {
 
 .join-btn {
     background: #faff00;
-    color: #000;
+    color: #000 !important;
     font-weight: 700;
     padding: 0.7rem 2rem;
     border-radius: 6px;
-    margin-left: 2rem;
+    margin-left: 1rem;
     text-decoration: none;
     font-size: 1.1rem;
     box-shadow: 2px 4px 0 #bdbd00;
@@ -116,6 +120,26 @@ body {
     padding-top: 7rem;
     padding-bottom: 2rem;
     background: #000;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
 }
 
 .video-school {
@@ -188,12 +212,18 @@ body {
 .about-text {
     flex: 1 1 350px;
     color: #eee;
-    font-size: 1.1rem;
-    text-align: center;
 }
 
 .about-text p {
     color: #fff;
+    text-align: center;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: 1em;
+}
+
+.about-text p:last-of-type {
+    margin-bottom: 0;
 }
 
 .about-image img {
@@ -204,20 +234,20 @@ body {
 }
 
 .about-intro {
-    font-size: 1.25rem;
-    color: #ffe066;
+    font-size: 1.4rem;
+    color: #fff;
     line-height: 1.7;
     margin: 1.5rem auto 2.5rem auto;
     max-width: 700px;
     text-align: center;
-    font-weight: 500;
+    font-weight: 600 !important;
     letter-spacing: 0.1px;
 }
 
 .about-intro-heading {
-    font-size: 1.7rem;
+    font-size: 2rem;
     color: #ffe066;
-    font-weight: 700;
+    font-weight: 900 !important;
     text-align: center;
     margin: 1.5rem auto 1rem auto;
     letter-spacing: 0.5px;
@@ -259,6 +289,7 @@ body {
     font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 .contact-intro {
@@ -338,26 +369,176 @@ footer {
 @media (max-width: 600px) {
     .navbar {
         flex-direction: column;
-        padding: 1rem 0.5rem;
+        align-items: center;
+        padding: 0.5rem 0.5rem;
+    }
+    .join-btn {
+        order: 1;
+        margin: 0 auto 0.7rem auto;
+        display: block;
+        width: fit-content;
+        min-width: 120px;
+        text-align: center;
+    }
+    .navbar-bottom {
+        order: 2;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 1.5rem;
+    }
+    .logo {
+        margin: 0;
+        font-size: 1.2rem;
+        text-align: center;
     }
     .nav-links {
-        gap: 1.2rem;
+        display: flex !important;
+        flex-direction: row;
+        gap: 0.7rem;
+        font-size: 0.95rem;
+        margin: 0;
+        padding: 0;
+        min-width: 0;
+        list-style: none;
+    }
+    .hero {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .hero-content {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
     .main-headline {
-        font-size: 2.1rem;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
     }
-    .hero-images {
-        gap: 1rem;
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1rem;
     }
-    .hero-images img {
-        width: 110px;
-        height: 70px;
+    .tool-logos {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
-    .about-image img {
-        width: 100%;
+    .tool-logos img,
+    .tool-logos .davinci-logo-adjust {
+        width: 48px !important;
+        height: 48px !important;
     }
-    .about, .services, .contact {
-        padding: 2.5rem 0.5rem 2rem 0.5rem;
+    .about, .services, .contact, .featured-videos, .experience-section, .node-tree-image-container {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+    .about-intro-heading,
+    h2.neon-yellow,
+    h3.neon-yellow {
+        color: #faff00 !important;
+        font-size: 1.5rem !important;
+        font-weight: 900 !important;
+        line-height: 1.2 !important;
+    }
+    .experience-window,
+    .experience-window *:not(h2) {
+        color: #23272f !important;
+        font-weight: 400 !important;
+    }
+    .exp-role-title,
+    .exp-meta,
+    .exp-role-date,
+    .exp-skills {
+        color: #23272f !important;
+        font-weight: 600 !important;
+    }
+    .experience-window h2 {
+        font-size: 1.5rem !important;
+        color: #faff00 !important;
+        font-weight: 900 !important;
+    }
+    .about-text p {
+        font-size: 1rem !important;
+        margin-bottom: 0.8em;
+    }
+    .experience-window {
+        padding: 1rem 0.2rem;
+        max-width: 98vw;
+    }
+    .exp-org {
+        gap: 0.5rem;
+        margin-bottom: 1.2rem;
+        padding-bottom: 0.7rem;
+    }
+    .exp-logo {
+        width: 32px;
+        height: 32px;
+    }
+    .service-card {
+        min-width: 180px;
+        max-width: 98vw;
+        padding: 1.2rem 0.5rem;
+        font-size: 1rem;
+    }
+    .node-tree-image-container img {
+        max-width: 98vw !important;
+    }
+    .node-tree-image-container h3 {
+        font-size: 1.1rem !important;
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+    .node-tree-image-container p {
+        font-size: 0.95rem !important;
+        max-width: 98vw !important;
+    }
+    .featured-videos h2 {
+        font-size: 1.2rem !important;
+        margin-bottom: 1.2rem !important;
+    }
+    .videos-grid {
+        gap: 1rem !important;
+    }
+    .video-embed iframe {
+        width: 98vw !important;
+        height: 180px !important;
+    }
+    /* Checkpoint 5: Center all main content and icons on mobile */
+    .hero-content,
+    .about,
+    .services,
+    .featured-videos,
+    .experience-section,
+    .node-tree-image-container {
+        text-align: center !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .tool-logos {
+        justify-content: center !important;
+    }
+    .services-grid {
+        justify-content: center !important;
     }
 }
 
@@ -381,4 +562,130 @@ footer {
 
 .tool-logos img:hover {
     transform: scale(1.08) rotate(-3deg);
+}
+
+.davinci-logo-adjust {
+    width: 130px;
+    height: 130px;
+    padding: 0;
+}
+
+/* Experience Section Styles */
+.experience-section {
+    background: #000;
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+}
+.experience-window {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.45);
+    padding: 2.5rem 2rem;
+    max-width: 780px;
+    width: 100%;
+    color: #23272f;
+    text-align: left;
+}
+.experience-window h2 {
+    color: #000 !important;
+    text-align: left;
+}
+.exp-org {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    margin-bottom: 2.2rem;
+    border-bottom: 1px solid #444a57;
+    padding-bottom: 1.2rem;
+}
+.exp-org:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+.exp-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    object-fit: contain;
+    background: #fff;
+    border: 1.5px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 4px;
+}
+.exp-roles {
+    margin: 0.5em 0 0.5em 0;
+    padding-left: 1.2em;
+}
+.exp-role-title {
+    font-weight: 600;
+    color: #23272f;
+}
+.exp-role-date, .exp-meta {
+    color: #666;
+    font-size: 0.97em;
+}
+.exp-skills {
+    color: #444a57;
+    margin-top: 0.5em;
+    font-size: 0.97em;
+}
+@media (max-width: 700px) {
+    .experience-window {
+        padding: 1.2rem 0.5rem;
+    }
+    .exp-org {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.7rem;
+    }
+    .exp-logo {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+.navbar-row {
+    display: flex;
+    align-items: center;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+.hamburger span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #faff00;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+@media (max-width: 600px) {
+    .nav-links {
+        display: flex !important;
+        flex-direction: row;
+        gap: 0.7rem;
+        font-size: 0.95rem;
+        margin: 0;
+        padding: 0;
+        min-width: 0;
+        list-style: none;
+    }
+    .hamburger {
+        display: flex;
+    }
+    .navbar {
+        position: relative;
+    }
 } 

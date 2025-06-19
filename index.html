@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eswar - Professional Video Editor</title>
+    <meta name="description" content="Eswar - Professional Video Editor & Motion Graphics Designer. Portfolio, services, and contact.">
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar dark-navbar">
@@ -19,12 +22,17 @@
     </nav>
 
     <section id="home" class="hero dark-bg">
+        <video autoplay loop muted playsinline class="hero-background-video">
+            <source src="Comp 1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <div class="hero-content">
             <h1 class="main-headline">Hello! I'm Eswar</h1>
-            <p class="hero-subtitle">Professional Video Editor & Filmmaking Enthusiast</p>
+            <p class="hero-subtitle">Professional Video Editor & Motion Graphics Designer</p>
             <div class="tool-logos">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg" alt="Premiere Pro" />
                 <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg" alt="After Effects" />
+                <img src="logos/DaVinci-Resolve-Logo.png" alt="DaVinci Resolve" class="davinci-logo-adjust" />
                 <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma" />
             </div>
            
@@ -36,13 +44,65 @@
         <p class="about-intro">Well, you may be a great artist, blogger, chef, writer or an entrepreneur just starting a business, All you need is an Audience, An Audience to whom you could sell your services or products.<br>
         And without them, everything is nothing!</p>
         <h2 class="neon-yellow">About Me</h2>
+        <p style="color: #ccc; font-size: 1.1rem; margin-top: 0.5rem; margin-bottom: 2rem;">2nd Year CS UnderGraduate Student</p>
         <div class="about-content">
             <div class="about-text">
-                <p>I am a passionate filmmaking enthusiast and a professional video editor with over nine months of experience. With a strong understanding of design concepts and visual storytelling, I have worked with some of the most notable creators ensuring every video leaves a lasting impact.</p>
-                <p>Whether you're an artist, blogger, chef, writer, or entrepreneur, I understand that your success depends on reaching the right audience. In today's digital world, where billions of hours of video are consumed daily, raw footage alone won't capture attention. That's where professional video editing comes in.</p>
+                <p>I am a professional video editor and Motion Graphic designer with over nine months of experience. With a strong understanding of design concepts and visual storytelling, I have worked with some of the most notable creators ensuring every video leaves a lasting impact.</p>
+                <p>Whether you're an artist, blogger, chef, writer, or entrepreneur, I understand that your success depends on reaching the right audience. In today's digital world, where billions of hours of video are consumed daily, <br>raw footage alone won't capture attention. That's where professional video editing comes in.</p>
+
+                <section id="experience" class="experience-section">
+                  <div class="experience-window">
+                    <h2 class="neon-yellow" style="margin-bottom:1.5rem;">Experience</h2>
+                    <div class="exp-org">
+                      <img src="logos/1.png" alt="SRM University Logo" class="exp-logo">
+                      <div>
+                        <strong>SRM University, AP</strong><br>
+                        <span class="exp-meta">Full-time &bull; 9 mos</span>
+                        <ul class="exp-roles">
+                          <li>
+                            <span class="exp-role-title">Co Convenor - Technical Wing, Sports Council</span><br>
+                            <span class="exp-role-date">May 2025 – Present</span>
+                          </li>
+                          <li>
+                            <span class="exp-role-title">Member - Technical Wing, Student Council</span><br>
+                            <span class="exp-role-date">May 2025 – Present</span>
+                          </li>
+                          <li>
+                            <span class="exp-role-title">Associate – Technical Wing, Student Council</span><br>
+                            <span class="exp-role-date">Oct 2024 – May 2025 &bull; 8 mos</span>
+                          </li>
+                        </ul>
+                        <div class="exp-skills"><strong>Skills:</strong> Adobe Premiere Pro &bull; After Effects &bull; Pre-production</div>
+                      </div>
+                    </div>
+                    <div class="exp-org">
+                      <img src="logos/3.png" alt="GeeksforGeeks Logo" class="exp-logo">
+                      <div>
+                        <strong>Social Media Lead – Hackvyuha'25 (GeeksforGeeks Hackathon)</strong><br>
+                        <span class="exp-meta">GeeksforGeeks &bull; Full-time</span><br>
+                        <span class="exp-role-date">May 2025 – May 2025 &bull; 1 mo</span>
+                        <div class="exp-skills"><strong>Skills:</strong> Pre-production &bull; Adobe Premiere Pro &bull; After Effects &bull; Optimization &bull; Content Strategy</div>
+                      </div>
+                    </div>
+                    <div class="exp-org">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/E-Cell_logo.png" alt="E-Cell Logo" class="exp-logo">
+                      <div>
+                        <strong>Post Production - Core Team, E-CELL</strong><br>
+                        <span class="exp-meta">Directorate of Innovation and Entrepreneurship &bull; Full-time</span><br>
+                        <span class="exp-role-date">Mar 2025 – Apr 2025 &bull; 2 mos</span>
+                      </div>
+                    </div>
+                  </div>
+                </section>
             </div>
         </div>
     </section>
+
+    <div class="node-tree-image-container" style="text-align: center; padding: 2rem 0;">
+        <h3 style="color: #faff00; margin-top: 1.5rem; font-size: 1.5rem; margin-bottom: 2rem;">My SLOG3 Color Grading/Correction Workflow</h3>
+        <img src="Photos/Screenshot 2025-06-17 at 5.31.49 PM.png" alt="DaVinci Resolve Node Tree" style="max-width: 80%; height: auto; border-radius: 10px; box-shadow: 0 4px 24px rgba(0,0,0,0.5);">
+        <p style="color: #ccc; margin-top: 0.5rem; max-width: 800px; margin-left: auto; margin-right: auto; font-size: 1.1rem; line-height: 1.6;">This is my standard SLOG3 color correction and grading node tree in DaVinci Resolve — built to be flexible and ready for any project. Not all nodes are meant to be used every time, but having them prepped allows for creative freedom and efficient adjustments.</p>
+    </div>
 
     <section id="featured-videos" class="featured-videos dark-bg">
         <h2 class="neon-yellow" style="text-align:center; margin-bottom:2.5rem;">Featured YouTube Videos</h2>
@@ -64,7 +124,7 @@
         <div class="services-grid">
             <div class="service-card">
                 <i class="fas fa-film"></i>
-                <h3>Video Editing</h3>
+                <h3>Video Editing & Motion Graphics</h3>
                 <p>Transform your raw footage into engaging, professional content that captures attention and tells your story effectively.</p>
             </div>
             <div class="service-card">
@@ -96,10 +156,11 @@
             <div class="social-links">
                 <a href="#"><i class="fab fa-youtube"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/omkareswar-j-408505308/" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="#"><i class="fab fa-vimeo"></i></a>
             </div>
             <p>&copy; 2024 Eswar - Professional Video Editor. All rights reserved.</p>
+            <p style="text-align:center; font-weight: 900; font-size: 1.2rem;">omkareswar49@gmail.com</p>
         </div>
     </footer>
 
